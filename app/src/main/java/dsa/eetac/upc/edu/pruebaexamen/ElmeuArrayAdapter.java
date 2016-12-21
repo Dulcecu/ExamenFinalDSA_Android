@@ -26,23 +26,7 @@ public class ElmeuArrayAdapter extends ArrayAdapter<String> {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.activity_list, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.label);
-        //ImageView imageView = (ImageView) rowView.findViewById(R.id.logo);
         textView.setText(values[position]);
-        /*imageView.setImageResource(R.drawable.muntanya_logo);
-        String s = values[position];
-if (s.equals("Montseny")) {
-        imageView.setImageResource(R.drawable.monseny_turo_home_150p);
-        } else if (s.equals("Mont Perdut")) {
-        imageView.setImageResource(R.drawable.montperdut_150p);
-       } else if (s.equals("Dôme de Neige")) {
-       imageView.setImageResource(R.drawable.dome_de_neige_150p);
-        } else if (s.equals("Pica d'Estats")) {
-        imageView.setImageResource(R.drawable.pica_destats_150p);
-        } else if (s.equals("Pedraforca")) {
-        imageView.setImageResource(R.drawable.pedradorca_150p);
-        } else {   //Montardo
-        imageView.setImageResource(R.drawable.montardo_150p);
-        }*/
         return rowView;
     }
 

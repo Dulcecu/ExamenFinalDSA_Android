@@ -15,7 +15,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import cz.msebera.android.httpclient.Header;
 /**
- * Created by Turpitude on 19/12/2016.
+ * Created by Turpitude on 21/12/2016.
  */
 public class Lista extends ListActivity {
     public String name;
@@ -44,45 +44,6 @@ public class Lista extends ListActivity {
         startActivity(Activity2);
     }
 
-/*
-    public void getTracks() throws JSONException, UnsupportedEncodingException {
-        final TextView res =(TextView) findViewById(R.id.label);
-        MainActivity.RestClient.get("/myapp/json/get", new JsonHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                try {
-                    String i=response.get("title").toString();
-                    res.setText(i);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onFailure(int statusCOde, Header[] headers, String s, Throwable i){
-            }
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-                // Pull out the first event on the public timeline
-                try {
-                    String[] arrayTrack =new String[response.length()];
-                    for (int i=0;i<response.length();i++) {
-                        String res=response.getJSONObject(i).get("title").toString();
-                        String s=response.getJSONObject(i).get("singer").toString();
-                        hs.put(res,s);
-                        arrayTrack[i]=res;
-                    }
-                    setListAdapter(new ElmeuArrayAdapter(getApplicationContext(), arrayTrack
-                    ));
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        });
-    }*/
     public void getEtakemons(String name) throws JSONException, UnsupportedEncodingException {
         final TextView res =(TextView) findViewById(R.id.label);
         MainActivity.RestClient.get("/myapp/json/get/"+name, new JsonHttpResponseHandler() {

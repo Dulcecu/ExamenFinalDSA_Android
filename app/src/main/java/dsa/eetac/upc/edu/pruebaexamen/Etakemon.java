@@ -3,7 +3,9 @@ package dsa.eetac.upc.edu.pruebaexamen;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-
+/**
+ * Created by Turpitude on 21/12/2016.
+ */
 public class Etakemon extends AppCompatActivity {
 
     @Override

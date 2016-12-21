@@ -25,7 +25,9 @@ import java.util.HashMap;
 
 import cz.msebera.android.httpclient.Header;
 import cz.msebera.android.httpclient.entity.StringEntity;
-
+/**
+ * Created by Turpitude on 21/12/2016.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(int statusCode, cz.msebera.android.httpclient.Header[] headers, String responseString, Throwable throwable) {
                         if(statusCode==500) {
-                            Toast.makeText(getApplicationContext(),responseString,
+                            Toast.makeText(getApplicationContext(),"ERROR",
                                     Toast.LENGTH_LONG).show();
                         }
                     }
@@ -104,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(int statusCode, cz.msebera.android.httpclient.Header[] headers, String responseString, Throwable throwable) {
 
-                            Toast.makeText(getApplicationContext(), "Usuario ya existente",
+                            Toast.makeText(getApplicationContext(), "ERROR",
                                     Toast.LENGTH_SHORT).show();
 
                     }

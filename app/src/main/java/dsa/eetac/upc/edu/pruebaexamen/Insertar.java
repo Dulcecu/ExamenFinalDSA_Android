@@ -18,7 +18,9 @@ import java.io.UnsupportedEncodingException;
 
 import cz.msebera.android.httpclient.entity.StringEntity;
 import cz.msebera.android.httpclient.entity.mime.Header;
-
+/**
+ * Created by Turpitude on 21/12/2016.
+ */
 public class Insertar extends AppCompatActivity {
     public String name2;
     @Override
@@ -48,9 +50,12 @@ public class Insertar extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onSuccess(int statusCode, cz.msebera.android.httpclient.Header[] headers, String responseString) {
-                        if(statusCode==200) {
+                    public void onSuccess(int statusCode, cz.msebera.android.httpclient.Header[] headers, String statCode) {
+                        if(statCode.equals("200")) {
                             Toast.makeText(getApplicationContext(), "Etakemon insertado correctamente",
+                                    Toast.LENGTH_LONG).show();
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Error al insertar",
                                     Toast.LENGTH_LONG).show();
                         }
                     }
@@ -82,9 +87,12 @@ public class Insertar extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onSuccess(int statusCode, cz.msebera.android.httpclient.Header[] headers, String responseString) {
-                        if(statusCode==200) {
+                    public void onSuccess(int statusCode, cz.msebera.android.httpclient.Header[] headers, String statCode) {
+                        if(statCode.equals("200")) {
                             Toast.makeText(getApplicationContext(), "Etakemon insertado correctamente",
+                                    Toast.LENGTH_LONG).show();
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Error al insertar",
                                     Toast.LENGTH_LONG).show();
                         }
                     }

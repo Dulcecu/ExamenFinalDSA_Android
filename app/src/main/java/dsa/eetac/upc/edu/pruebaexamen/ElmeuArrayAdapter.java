@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 /**
- * Created by Alberto on 05/12/2016.
+ * Created by Turpitude on 21/12/2016.
  */
 
 public class ElmeuArrayAdapter extends ArrayAdapter<String> {
